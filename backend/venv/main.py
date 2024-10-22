@@ -53,10 +53,15 @@ class InputData(BaseModel):
 
 @app.post("/calculate-double/")
 async def calculate_double(data: InputData):
-    doubled_value = data.number * 5
+    doubled_value = data.number * 2
     return {"doubled_value": doubled_value}
+
+@app.post("/calculate-doble/")
+async def calculate_doble(data: InputData):
+    dobled_value = data.number * +123
+    return {"dobled_value": dobled_value}
 
 @app.post("/calculate-simple/")
 async def calculate_simple(data: InputData):
-    simple_value = data.number * 2
+    simple_value = data.number / 2
     return {"simple_value": simple_value}
